@@ -15,7 +15,7 @@ WeeWX supports many dozens of weather station vendors and models, as well as a v
 
 WeeWX is is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add, including user-developed dashboards presenting the available data in a variety of ways. It runs on basically any hardware that can run a modern python version 3.7 or later and can be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
 
-User support is done via a 'weewx-user' Google group that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
+User support is done via a 'weewx-user' Google group (LINK TODO) that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
 
 ## Some Terminology
 
@@ -63,11 +63,13 @@ The usual weeWX configuration periodically generates a set of web pages and imag
 
 ### Integrating WeeWX With Your Webserver
 
-WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice, and set that webserver up appropriately so weewx can save its generated web pages and images into a directly the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
+WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice, and set that webserver up appropriately so weewx can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
 
 In short - weeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the webserver process ('www-data' for some webserver packages).  Initially it is helpful to set debug=1 in weewx.conf to make the debugging information more verbose to help you get things integrated successfully.
 
 There are so many webserver variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.  WeeWX doesn't require any particular webserver package.  It only needs to be able to write to the webserver's HTML document tree.
+
+Some possible ways to do this are available here (LINK TODO)
 
 ### Viewing Log Files
 
@@ -84,5 +86,4 @@ Please see the following:
 * the weewx-user Google Group
 * wiki
 * faq
-* guides.... 
-# weewx-getting-started
+* guides....list'em out
