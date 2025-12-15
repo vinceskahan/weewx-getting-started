@@ -89,7 +89,7 @@ For details - see [HERE](logging-with-rsyslogd.md).
 Please see the following:
 
 * the weewx-user [Google Group](https://groups.google.com/g/weewx-user) 
-* the weeWX [Wiki](https://www.weewx.com/docs/5.2/#wiki)
+* the weeWX [Wiki](https://github.com/weewx/weewx/wiki)
 * the weeWX [Frequently Asked Questions](https://github.com/weewx/weewx/wiki/WeeWX-Frequently-Asked-Questions) aka FAQ
 * the very detailed [WeeWX Documentation](https://www.weewx.com/docs/5.2/) 
 
