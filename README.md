@@ -69,9 +69,8 @@ In short - weeWX runs as a unprivileged user ('weeWX' for a packaged installatio
 
 There are so many webserver variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.  WeeWX doesn't require any particular webserver package.  It only needs to be able to write to the webserver's HTML document tree.
 
-Some possible ways to do this are available here (LINK TODO)
-
-For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md).   For more possibilities see the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
+* For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md)
+* For more possibilities see the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
 
 ### Viewing Log Files
 
