@@ -43,5 +43,5 @@ sudo systemctl restart weewx
 
 ### About permissions
 
-/var/log/weewx for debian(ish) systems typically prevents world-read, so you might need to add your account to a unix group that has read access.  To do this on a raspberry pi you would `usermod -aG adm my_username_here1 for whatever username you are logged into.  On a raspberry pi this frequently is not necessary.  You can check your group membership via the `groups` command.
+/var/log/weewx for debian(ish) systems typically prevents world-read, so you might need to add your account to a unix group that has read access.  To do this on a raspberry pi you would `usermod -aG adm my_username_here` for whatever username you are logged into.  On a raspberry pi this frequently is not necessary.  You can check your group membership via the `groups` command.
 
