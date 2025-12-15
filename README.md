@@ -79,7 +79,7 @@ For new users, finding and viewing log files is typically difficult to learn.  B
 
 Many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, and configure the legacy 'logrotate' tool to periodically rotate the logs.  Template files for both rsyslogd and logrotate are provided with weeWX and it's only a few one-time steps to configure logging to work in a legacy rsyslogd type of mode.
 
-For details - see (LINK TODO)
+For details - see [HERE](logging-with-rsyslogd.md).
 
 ## For More Information
 
