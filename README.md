@@ -71,7 +71,7 @@ There are so many webserver variants that it is impossible to list the differenc
 
 Some possible ways to do this are available here (LINK TODO)
 
-For nginx on a debian(ish) system, one way to do so is [integrate-weewx-with-nginx.md](HERE).   For more possibilities see the [https://www.weewx.com/docs/5.2/usersguide/webserver/](User's Guide).
+For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md].   For more possibilities see the (https://www.weewx.com/docs/5.2/usersguide/webserver/)[User's Guide].
 
 ### Viewing Log Files
 
