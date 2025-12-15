@@ -15,7 +15,7 @@ WeeWX supports many dozens of weather station vendors and models, as well as a v
 
 WeeWX is is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add, including user-developed dashboards presenting the available data in a variety of ways. It runs on basically any hardware that can run a modern python version 3.7 or later and can be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
 
-User support is done via a 'weeWX-user' Google group (LINK TODO) that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
+User support is done via the [weexX-user Google group] (https://groups.google.com/g/weewx-user) that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
 
 ## Some Terminology
 
@@ -46,7 +46,7 @@ For a working weeWX system need you learn how do the following:
 
 ### Installation
 
-WeeWX can be installed in a variety of ways. New users typically use their operating system's native packaging mechanism (apt, yum, rpm, zipper). Other more advanced installation mechanisms (pip, git) are available as well.  For details - see the Quickstart (LINK TODO)
+WeeWX can be installed in a variety of ways. New users typically use their operating system's native packaging mechanism (apt, yum, rpm, zipper). Other more advanced installation mechanisms (pip, git) are available as well.  For details and procedures - start with the [WeeWX Quick start](https://www.weewx.com/docs/5.2/#installation)
 
 ### Configuration
 
