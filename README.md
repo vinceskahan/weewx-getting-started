@@ -15,7 +15,7 @@ WeeWX supports many dozens of weather station vendors and models, as well as a v
 
 WeeWX is is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add, including user-developed dashboards presenting the available data in a variety of ways. It runs on basically any hardware that can run a modern python version 3.7 or later and can be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
 
-User support is done via the [weexX-user Google group] (https://groups.google.com/g/weewx-user) that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
+User support is done via the weewx-user [Google Group](https://groups.google.com/g/weewx-user) that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
 
 ## Some Terminology
 
