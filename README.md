@@ -2,7 +2,9 @@
 
 The intent of this document is to provide a gentle introduction to WeeWX and some basics to get you up and running, with pointers to more detailed information elsewhere in the rather large set of weeWX documention available in the various guides, wiki, and frequently asked questions.
 
-This document links to weewx-5.2 authoritative documents.  To see documentation for other versions, those are available [HERE](https://www.weewx.com/docs.html)
+This document links to weewx-5.2 authoritative documents.
+
+To see documentation for other versions, those are available [HERE](https://www.weewx.com/docs.html)
 
 ## About WeeWX
 
@@ -86,8 +88,8 @@ For details - see [HERE](logging-with-rsyslogd.md).
 
 Please see the following:
 
-* the weeWX-user Google Group
-* wiki
-* faq
-* guides....list'em out
-integrate-weewx-with-nginx.md
+* the weewx-user [Google Group](https://groups.google.com/g/weewx-user) 
+* the weeWX [Wiki](https://www.weewx.com/docs/5.2/#wiki)
+* the weeWX [Frequently Asked Questions](https://github.com/weewx/weewx/wiki/WeeWX-Frequently-Asked-Questions) aka FAQ
+* the very detailed [WeeWX Documentation](https://www.weewx.com/docs/5.2/) 
+
