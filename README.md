@@ -71,6 +71,8 @@ There are so many webserver variants that it is impossible to list the differenc
 
 Some possible ways to do this are available here (LINK TODO)
 
+For nginx on a debian(ish) system, one way to do so is [integrate-weewx-with-nginx.md](HERE).   For more possibilities see the [https://www.weewx.com/docs/5.2/usersguide/webserver/](User's Guide).
+
 ### Viewing Log Files
 
 For new users, finding and viewing log files is typically difficult to learn.  By default weeWX logs via your operating system's default logging mechanism, which currently tends to be 'systemd'.  Systemd can be complicated for many users and its interface can be painful.  This is the operating system's choice, unfortunately.
@@ -87,3 +89,4 @@ Please see the following:
 * wiki
 * faq
 * guides....list'em out
+integrate-weewx-with-nginx.md
