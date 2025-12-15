@@ -55,7 +55,7 @@ WeeWX is set up via two main configuration files:
 * weewx.conf configures weeWX itself
 * skin.conf configures a particular skin specifically 
 
-For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weewx.conf to match.  You can also (re)configure your setup using the provided 'weectl' utility to add, delete, tune your system.  Inotially simply running the defaults is recommended.
+For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weewx.conf to match.  You can also (re)configure your setup using the provided 'weectl' utility to add, delete, tune your system.  Initially simply running the defaults is recommended.
 
 ### Generating a Weather Dashboard
 
