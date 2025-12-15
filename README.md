@@ -2,6 +2,8 @@
 
 The intent of this document is to provide a gentle introduction to WeeWX and some basics to get you up and running, with pointers to more detailed information elsewhere in the rather large set of weeWX documention available in the various guides, wiki, and frequently asked questions.
 
+This document links to weewx-5.2 authoritative documents.  To see documentation for other versions, those are available [HERE](https://www.weewx.com/docs.html)
+
 ## About WeeWX
 
 WeeWX is python software that permits you to:
