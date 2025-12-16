@@ -1,6 +1,6 @@
 # WeeWX Getting Started Guide
 
-The intent of this document is to provide a gentle introduction to WeeWX and some basics to get you up and running, with pointers to more detailed information elsewhere in the rather large set of weeWX documention available in the various guides, wiki, and frequently asked questions.
+The intent of this document is to provide a gentle introduction to WeeWX and some basics to get you up and running, with pointers to more detailed information elsewhere in the rather large set of WeeWX documention available in the various guides, wiki, and frequently asked questions.
 
 This document links to weewx-5.2 authoritative documents.
 
@@ -27,23 +27,23 @@ WeeWX has some terminology you need to be aware of:
 
 * a 'driver' interfaces with your weather station or other source of data
 * a 'skin' presents your data into web pages and/or generated images
-* a 'service' adds typically user-developed functionality to weeWX core
+* a 'service' adds typically user-developed functionality to WeeWX core
 * an 'extension' packages customizations for easy installation
 
-There are literally dozens of user-developed and user-supported drivers, skins, services, and extensions available to optionally add to your weeWX system.
+There are literally dozens of user-developed and user-supported drivers, skins, services, and extensions available to optionally add to your WeeWX system.
 
 You might see a few additional terms in the documentation and support forums:
 
 * LOOP data is readings your station emits routinely from its sensors, sometimes every few seconds
-* ARCHIVE data is that data summarized by weeWX periodically, generally every few minutes
+* ARCHIVE data is that data summarized by WeeWX periodically, generally every few minutes
 
-Archive data is what weeWX actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that 'archive_interval', which is by default 300 seconds.
+Archive data is what WeeWX actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that 'archive_interval', which is by default 300 seconds.
 
 ## WeeWX In A Nutshell
 
-For a working weeWX system need you learn how do the following:
+For a working WeeWX system need you learn how do the following:
 
-* install and configure weeWX itself
+* install and configure WeeWX itself
 * install and configure a webserver to match
 * learn how to monitor your system logs
 * learn how to change your initial settings
@@ -57,20 +57,20 @@ WeeWX can be installed in a variety of ways. New users typically use their opera
 
 WeeWX is set up via two main configuration files:
 
-* weeWX.conf configures weeWX itself
+* weewx.conf configures WeeWX itself
 * skin.conf configures a particular skin specifically 
 
-For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weeWX.conf to match.  You can also (re)configure your setup using the provided 'weectl' utility to add, delete, tune your system.  Initially simply running the defaults is recommended.
+For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weewx.conf to match.  You can also (re)configure your setup using the provided 'weectl' utility to add, delete, tune your system.  Initially simply running the defaults is recommended.
 
 ### Generating a Weather Dashboard
 
-The usual weeWX configuration periodically generates a set of web pages and images you can view via a web browser as a weather dashboard, so to speak.  This does not happen in realtime, it happens only periodically based on how you have the weeWX 'archive_interval' set. 
+The usual WeeWX configuration periodically generates a set of web pages and images you can view via a web browser as a weather dashboard, so to speak.  This does not happen in realtime, it happens only periodically based on how you have the WeeWX 'archive_interval' set.
 
 ### Integrating WeeWX With Your Webserver
 
-WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice, and set that webserver up appropriately so weeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
+WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice, and set that webserver up appropriately so WeeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
 
-In short - weeWX runs as a unprivileged user ('weeWX' for a packaged installation) that needs to be able to write to a directory owned by the webserver process ('www-data' for some webserver packages).  Initially it is helpful to set debug=1 in weeWX.conf to make the debugging information more verbose to help you get things integrated successfully.
+In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the webserver process ('www-data' for some webserver packages).  Initially it is helpful to set debug=1 in weewx.conf to make the debugging information more verbose to help you get things integrated successfully.
 
 There are so many webserver variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.  WeeWX doesn't require any particular webserver package.  It only needs to be able to write to the webserver's HTML document tree.
 
@@ -79,17 +79,19 @@ There are so many webserver variants that it is impossible to list the differenc
 
 ### Viewing Log Files
 
-For new users, finding and viewing log files is typically difficult to learn.  By default weeWX logs via your operating system's default logging mechanism, which currently tends to be 'systemd'.  Systemd can be complicated for many users and its interface can be painful.  This is the operating system's choice, unfortunately.
+For new users, finding and viewing log files is typically difficult to learn.  By default WeeWX logs via your operating system's default logging mechanism, which currently tends to be 'systemd'.  Systemd can be complicated for many users and its interface can be painful.  This is the operating system's choice, unfortunately.  For details on how to use systemd's 'systemctl' command, consult your operating system's manual pages, do a Google search, or see the WeeWX documentation's discussion regarding logging [HERE](https://www.weewx.com/docs/5.2/usersguide/monitoring/).
 
-Many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, and configure the legacy 'logrotate' tool to periodically rotate the logs.  Template files for both rsyslogd and logrotate are provided with weeWX and it's only a few one-time steps to configure logging to work in a legacy rsyslogd type of mode.
-
-For details - see [HERE](logging-with-rsyslogd.md).
+Many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, and configure the legacy 'logrotate' tool to periodically rotate the logs.  Template files for both rsyslogd and logrotate are provided with WeeWX and it's only a few one-time steps to configure logging to work in a legacy rsyslogd type of mode.  For details - see [HERE](logging-with-rsyslogd.md).
 
 ### How To Change Your Initial Settings
 
 WeeWX provides the `weectl` utility for configuring much of the system settings, as well as other operations.  For details see the documentation [HERE](https://www.weewx.com/docs/5.2/utilities/weectl-about/).
 
 In other cases, you might need to manually edit weewx.conf or a skin.conf file, or even a html .tmpl template file within a skin.  If you edit weewx.conf, you will need to restart weewx to make the changes take effect.  Changes to skin.conf or a skin's .tmpl HTML templates take effect when weewx runs its periodic reports when the next archive_interval rolls around.
+
+### How To Change Your Weather Dashboard
+
+By default, the Seasons 'skin' is enabled when your initial installation is complete, with many other possible dashboards provided as skins by WeeWX.  To enable/disable a particular skin, simply set 'enable=true' or 'enable=false' in its section in weewx.conf, then restart WeeWX.  You may optionally install other skins via the `weectl extension` installer.  There is a long list of some available skins in the WeeWX Wiki.
 
 ### How To Report A Problem
 
@@ -102,7 +104,7 @@ See [HERE](how-to-report-a-problem.md) as one way to do a good problem report.
 Please see the following:
 
 * the weewx-user [Google Group](https://groups.google.com/g/weewx-user) 
-* the weeWX [Wiki](https://github.com/weewx/weewx/wiki)
-* the weeWX [Frequently Asked Questions](https://github.com/weewx/weewx/wiki/WeeWX-Frequently-Asked-Questions) aka FAQ
+* the WeeWX [Wiki](https://github.com/weewx/weewx/wiki)
+* the WeeWX [Frequently Asked Questions](https://github.com/weewx/weewx/wiki/WeeWX-Frequently-Asked-Questions) aka FAQ
 * the very detailed [WeeWX Documentation](https://www.weewx.com/docs) 
 

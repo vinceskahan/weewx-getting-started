@@ -1,7 +1,7 @@
 
-## How to integrate weeWX with nginx
+## How to integrate WeeWX with nginx
 
-Here is one way to integrate weeWX with an nginx webserver.
+Here is one way to integrate WeeWX with an nginx webserver.
 
 ### weewx 'pip' installation under /home/pi
 

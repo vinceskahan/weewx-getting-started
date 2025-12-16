@@ -1,7 +1,7 @@
 
 ## How to log via rsyslogd
 
-Many users prefer legacy rsyslogd's flat file logging over current systemd's more complicated interface. These instructions are the same other than the location of the provided 'util' templates directory. When complete, your weeWX system will log to flat files in /var/log/weewx.
+Many users prefer legacy rsyslogd's flat file logging over current systemd's more complicated interface. These instructions are the same other than the location of the provided 'util' templates directory. When complete, your WeeWX system will log to flat files in /var/log/weewx.
 
 ### For pip installations
 
