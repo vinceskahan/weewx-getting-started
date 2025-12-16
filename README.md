@@ -93,13 +93,15 @@ In other cases, you might need to manually edit weewx.conf or a skin.conf file, 
 
 By default, the Seasons 'skin' is enabled when your initial installation is complete, with many other possible dashboards provided as skins by WeeWX.
 
-To enable/disable a particular skin, simply set 'enable=true' or 'enable=false' in its section in weewx.conf, then restart WeeWX.  You may optionally install other skins via the `weectl extension` installer.  There is a long list of some available skins in the WeeWX Wiki.
+To enable/disable a particular skin, simply set 'enable=true' or 'enable=false' in its section in weewx.conf, then restart WeeWX.  You may optionally install other skins via the `weectl extension` installer.
 
-You can also create your own custom skin from scratch, which is a much more advanced topic.  See the [Customization Guide](https://www.weewx.com/docs/5.2/custom/introduction/) for details.
+There is a long list of some available user-developed skins in the WeeWX Wiki. You can also create your own custom skin from scratch, which is a much more advanced topic.  See the [Customization Guide](https://www.weewx.com/docs/5.2/custom/introduction/) for details.
 
 ### Uploading Your Data To Internet Sites
 
-Many users choose to upload their data periodically to commonly used Internet sites such as Weather Underground.  This is enabled by hand-editing weewx.conf and setting the required parameters in that site's section therein, setting enable=true, and restarting weewx.  Uploaders for a half-dozen well-known sites are included in WeeWX core, with several dozen more that can be added. See the Wiki for many user-provided uploaders and links to each item's installation and configuration steps.
+Many users choose to upload their data periodically to commonly used Internet sites such as Weather Underground.  This is enabled by hand-editing weewx.conf and setting the required parameters in that site's section therein, setting enable=true, and restarting weewx.
+
+Uploaders for a half-dozen well-known sites are included in WeeWX core, with several dozen more that can be added. See the Wiki for many user-provided uploaders and links to each item's installation and configuration steps.
 
 ### How To Report A Problem
 
