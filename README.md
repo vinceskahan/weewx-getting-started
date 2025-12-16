@@ -86,10 +86,16 @@ Many users choose to customize their operating system to add the legacy 'rsyslog
 For details - see [HERE](logging-with-rsyslogd.md).
 
 ### How To Change Your Initial Settings
-(coming soon)
+
+WeeWX provides the `weectl` utility for configuring much of the system settings, as well as other operations.  For details see the documentation [HERE](https://www.weewx.com/docs/5.2/utilities/weectl-about/).
+
+In other cases, you might need to manually edit weewx.conf or a skin.conf file, or even a html .tmpl template file within a skin.  If you edit weewx.conf, you will need to restart weewx to make the changes take effect.  Changes to skin.conf or a skin's .tmpl HTML templates take effect when weewx runs its periodic reports when the next archive_interval rolls around.
 
 ### How To Report A Problem
-(coming soon)
+
+When you need to report a problem or ask a HOWTO type question, the users in weewx-users typically need more information about your setup, what you did, and what you are seeing.  It can take quite a few back+forth questions and answers to get enough information to try to help.
+
+See [HERE](how-to-report-a-problem.md) as one way to do a good problem report.
 
 ## For More Information
 
