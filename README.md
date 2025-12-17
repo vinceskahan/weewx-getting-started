@@ -17,7 +17,7 @@ WeeWX is python software that permits you to:
 
 WeeWX supports many dozens of weather station vendors and models, as well as a variety of external sources of data such as MQTT.  It can also (optionally) upload your weather data to a variety of external sites such as Weather Underground.
 
-WeeWX is is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add, including user-developed dashboards presenting the available data in a variety of ways. It runs on basically any hardware that can run a modern python version 3.7 or later and can be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
+WeeWX is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add, including user-developed dashboards presenting the available data in a variety of ways. It can run on basically any hardware that can run a modern python version 3.7 or later and may be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
 
 User support is done via the weewx-user [Google Group](https://groups.google.com/g/weewx-user) that you may subscribe to and view via a web browser, or alternately choose to receive posts via email.
 
@@ -68,7 +68,7 @@ The usual WeeWX configuration periodically generates a set of web pages and imag
 
 ### Integrating WeeWX With Your Webserver
 
-WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice, and set that webserver up appropriately so WeeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
+WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice and configure that webserver appropriately so that WeeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
 
 In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the webserver process ('www-data' for some webserver packages).  Initially it is helpful to set debug=1 in weewx.conf to make the debugging information more verbose to help you get things integrated successfully.
 
