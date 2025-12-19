@@ -40,8 +40,8 @@ You might see a few additional terms in the documentation and support forums:
 
 Archive data is what WeeWX actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that `archive_interval`, which is by default 300 seconds.
 
-> [!TIP]
-> Setting your archive_interval too fast can interfere with system operation on slow systems.
+> [!CAUTION]
+> Setting your archive_interval too fast can interfere with weewx operation on slow systems.
 
 ## WeeWX In A Nutshell
 
