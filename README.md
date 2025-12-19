@@ -96,7 +96,10 @@ By default WeeWX logs via your operating system's default logging mechanism, whi
 
 Systemd can be complicated for many users and its interface can be painful.  For details on how to use systemd's 'systemctl' command, consult your operating system's manual pages, do a Google search, or see the WeeWX documentation's discussion regarding logging [HERE](https://www.weewx.com/docs/5.2/usersguide/monitoring/).
 
-Many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, which requires also installing and configuring the legacy 'logrotate' tool to periodically rotate the logs.  Template files for both rsyslogd and logrotate are provided with WeeWX and it's only a few one-time steps to configure logging to work in a legacy rsyslogd type of mode.  For details - see [HERE](logging-with-rsyslogd.md).
+> [!TIP]
+> Alternately, many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, which requires also installing and configuring the legacy 'logrotate' tool to periodically rotate the logs.
+>
+> Template files for both rsyslogd and logrotate are provided with WeeWX and it's only a few one-time steps to configure logging to work in a legacy rsyslogd type of mode.  For details - see [HERE](logging-with-rsyslogd.md).
 
 ### How To Change Your Initial Settings
 
