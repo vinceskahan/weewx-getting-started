@@ -38,10 +38,7 @@ You might see a few additional terms in the documentation and support forums:
 * LOOP data is readings your station emits routinely from its sensors, sometimes every few seconds
 * ARCHIVE data is that data summarized by WeeWX periodically, generally every few minutes
 
-Archive data is what WeeWX actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that `archive_interval`, which is by default 300 seconds.
-
-> [!CAUTION]
-> Setting your archive_interval too low (fast) can interfere with weewx operation on slow systems.
+Archive data is what WeeWX periodically actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that period of time.
 
 ## WeeWX In A Nutshell
 
@@ -75,6 +72,9 @@ Initially simply running the defaults is recommended.
 The usual WeeWX configuration periodically generates a set of web pages and images you can view via a web browser as a weather dashboard, so to speak.
 
 This does not happen in realtime, it happens only periodically based on how you have the 'archive_interval' configuration item set in weewx.conf.
+
+> [!CAUTION]
+> Setting your archive_interval too low (fast) can interfere with weewx operation on slow systems.
 
 ### Integrating WeeWX With Your Webserver
 
