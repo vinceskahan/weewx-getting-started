@@ -86,7 +86,8 @@ WeeWX does not require any particular webserver package.  It only needs to be ab
 * For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md)
 * For more possibilities see the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
 
-Initially it is helpful to set debug=1 in weewx.conf to make the debugging information more verbose to help you get things integrated successfully.
+> [!TIP]
+>Initially it is helpful to set debug=1 in weewx.conf to make the debugging information more verbose to help you get things integrated successfully.
 
 ### Viewing Log Files
 
