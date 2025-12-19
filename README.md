@@ -45,7 +45,7 @@ Archive data is what WeeWX periodically actually saves to its database, generall
 For a working WeeWX system you need to learn how do the following:
 
 * install and configure WeeWX itself
-* install and configure a webserver to match
+* install and configure a web server to match
 * learn how to monitor your system logs
 * learn how to change your initial settings
 * learn how to report a problem
@@ -78,13 +78,13 @@ This does not happen in realtime, it happens only periodically based on how you 
 
 ### Integrating WeeWX With Your Webserver
 
-WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice so that WeeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
+WeeWX does not come with a web server of its own. It is expected that the user will install and configure a web server of their choice so that WeeWX can save its generated web pages and images into a directory the web server can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how web servers or unix permissions work.
 
-In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the webserver process (which may differ depending on which webserver you install).
+In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the web server process (which may differ depending on which web server you install).
 
-WeeWX does not require any particular webserver package.  It only needs to be able to write to the webserver's HTML document tree.
+WeeWX does not require any particular web server package.  It only needs to be able to write to the web server's HTML document tree.
 
-  There are so many webserver variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.
+  There are so many web server variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.
 
 * For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md)
 * For more possibilities see the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
