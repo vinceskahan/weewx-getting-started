@@ -76,7 +76,7 @@ This does not happen in realtime, it happens only periodically based on how you 
 > [!CAUTION]
 > Setting your archive_interval too low (fast) can interfere with weewx operation on slow systems.
 
-### Integrating WeeWX With Your Webserver
+### Integrating WeeWX With Your Web Server
 
 WeeWX does not come with a web server of its own. It is expected that the user will install and configure a web server of their choice so that WeeWX can save its generated web pages and images into a directory the web server can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how web servers or unix permissions work.
 
