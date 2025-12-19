@@ -60,8 +60,8 @@ For details and procedures - start with the [WeeWX Quick start](https://www.weew
 
 WeeWX is set up via two main configuration files:
 
-* weewx.conf configures WeeWX itself
-* skin.conf configures a particular skin specifically 
+* `weewx.conf` configures WeeWX itself
+* `skin.conf` configures each particular skin specifically 
 
 For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weewx.conf to match. The provided `weectl` utility is used to add to, delete from, or tune your system, although some hand-editing of weewx.conf might be needed as well..
 
@@ -69,13 +69,19 @@ Initially simply running the defaults is recommended.
 
 ### Generating a Weather Dashboard
 
-The usual WeeWX configuration periodically generates a set of web pages and images you can view via a web browser as a weather dashboard, so to speak.  This does not happen in realtime, it happens only periodically based on how you have the WeeWX 'archive_interval' set.
+The usual WeeWX configuration periodically generates a set of web pages and images you can view via a web browser as a weather dashboard, so to speak.
+
+This does not happen in realtime, it happens only periodically based on how you have the 'archive_interval' configuration item set in weewx.conf.
 
 ### Integrating WeeWX With Your Webserver
 
-WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice and configure that webserver appropriately so that WeeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
+WeeWX does not come with a web server of its own. It is expected that the user will install and configure a webserver of their choice so that WeeWX can save its generated web pages and images into a directory the webserver can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how webservers or unix permissions work.
 
-In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the webserver process (which may differ depending on which webserver you install).  There are so many webserver variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.  WeeWX doesn't require any particular webserver package.  It only needs to be able to write to the webserver's HTML document tree.
+In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the webserver process (which may differ depending on which webserver you install).
+
+WeeWX does not require any particular webserver package.  It only needs to be able to write to the webserver's HTML document tree.
+
+  There are so many webserver variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.
 
 * For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md)
 * For more possibilities see the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
