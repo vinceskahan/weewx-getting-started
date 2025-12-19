@@ -42,7 +42,7 @@ Archive data is what WeeWX periodically actually saves to its database, generall
 
 ## WeeWX In A Nutshell
 
-For a working WeeWX system need you learn how do the following:
+For a working WeeWX system you need to learn how do the following:
 
 * install and configure WeeWX itself
 * install and configure a webserver to match
