@@ -17,9 +17,15 @@ WeeWX is python software that permits you to:
 
 WeeWX supports many dozens of weather station vendors and models, as well as a variety of external sources of data such as MQTT.  It can also (optionally) upload your weather data to a variety of external sites such as Weather Underground.
 
-WeeWX is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add, including user-developed dashboards presenting the available data in a variety of ways. It can run on basically any hardware that can run a modern python version 3.7 or later and may be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
+WeeWX is extremely extensible, with many dozens of user-developed additions and integrations you may choose to add in order to ingest or present your data in a variety of ways. It can run on basically any hardware that can run a modern python version 3.7 or later and may be installed in multiple ways, including via pre-built packages installable onto the most common unix/linux platforms.
 
-User support is done via the weewx-user [Google Group](https://groups.google.com/g/weewx-user) that you may subscribe to and view via a web browser, or you may alternately choose to receive posts via email.
+User support is done via the weewx-user [Google Group](https://groups.google.com/g/weewx-user) you may choose the subscribe to.  A Google account login is required for posting.
+
+## A Typical System
+
+A typical WeeWX system consists of two parts, WeeWX itself and a web server.
+
+WeeWX does 'not' come with a web server. It is expected that the user install and configure the web server of their choice.
 
 ## Some Terminology
 
@@ -74,23 +80,27 @@ The usual WeeWX configuration periodically generates a set of web pages and imag
 This does not happen in realtime, it happens only periodically based on how you have the 'archive_interval' configuration item set in weewx.conf.
 
 > [!CAUTION]
-> Setting your archive_interval too low (fast) can interfere with weewx operation on slow systems.
+> Setting the archive_interval value too low (fast) can interfere with weewx operation on slow systems.
 
 ### Integrating WeeWX With Your Web Server
 
-WeeWX does not come with a web server of its own. It is expected that the user will install and configure a web server of their choice so that WeeWX can save its generated web pages and images into a directory the web server can read.  This is frequently the source of some initial issues, which can be hard to work through for users not familiar with how web servers or unix permissions work.
+Integrating WeeWX with a web server can be very frustrating for new users, who frequently run into unix permissions misconfiguration issues.
 
-In short - WeeWX runs as a unprivileged user ('weewx' for a packaged installation) that needs to be able to write to a directory owned by the web server process (which may differ depending on which web server you install).
+In short:
+* WeeWX runs as an unprivileged user ('weewx' for a packaged installation)
+* which needs to be able to write to a directory owned by the web server process
+* which in turn runs as a 'different' unix user
+* lastly, WeeWX needs to be able to write to the web server's HTML document tree
 
-WeeWX does not require any particular web server package.  It only needs to be able to write to the web server's HTML document tree.
+WeeWX does not require any particular web server package.
 
-  There are so many web server variants that it is impossible to list the differences here, but typically users install 'nginx' or 'apache' or whatever is their preferred package.
+Users typically install 'nginx' or 'apache' although any web server package will work.
 
-* For nginx on a debian(ish) system, one way to do so is [HERE](integrate-weewx-with-nginx.md)
-* For more possibilities see the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
+* For nginx on a debian(ish) system, one method to configure nginx is [HERE](integrate-weewx-with-nginx.md)
+* Alternate configurations are discussed in detail in the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
 
 > [!TIP]
->Initially it is helpful to set debug=1 in weewx.conf to make the debugging information more verbose to help you get things integrated successfully.
+>Initially it is helpful to set debug=1 in `weewx.conf` to make the debugging information more verbose to help you get things integrated successfully.
 
 ### Viewing Log Files
 
@@ -98,7 +108,7 @@ For new users, finding and viewing log files is typically difficult to learn.
 
 By default WeeWX logs via your operating system's default logging mechanism, which currently tends to be 'systemd'. This is the operating system's choice, unfortunately.
 
-Systemd can be complicated for many users and its interface can be painful.  For details on how to use systemd's 'systemctl' command, consult your operating system's manual pages, do a Google search, or see the WeeWX documentation's discussion regarding logging [HERE](https://www.weewx.com/docs/5.2/usersguide/monitoring/).
+Systemd can be complicated for many users and its interface can be painful.  For details on how to use systemd's 'systemctl' command, consult your operating system's manual pages, do a Google search, or see the WeeWX documentation [HERE](https://www.weewx.com/docs/5.2/usersguide/monitoring/).
 
 > [!TIP]
 > Alternately, many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, which requires also installing and configuring the legacy 'logrotate' tool to periodically rotate the logs.
