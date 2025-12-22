@@ -46,7 +46,7 @@ You might see a few additional terms in the documentation and support forums:
 * LOOP data is readings your station emits routinely from its sensors, sometimes every few seconds
 * ARCHIVE data is that data summarized by WeeWX periodically, generally every few minutes
 
-Archive data is what WeeWX periodically actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that period of time.
+Archive data is what WeeWX periodically actually saves to its database, generally containing the high/low/average of all the LOOP sensor data during that period of time.  For sensor readings that accumulate (such as rain), they contain the sum of the readings during that period of time.
 
 ## WeeWX In A Nutshell
 
@@ -93,12 +93,12 @@ In short:
 * which needs to be able to write to a directory owned by the web server process
 * which in turn runs as a 'different' unix user
 
-This last item frequently causes new users to struggle with into unix permissions misconfiguration issues. WeeWX needs to be able to write to the web server's HTML document tree.  Unfortunately there are too many web server variants to provide a universal howto here.
+This last item frequently causes new users to struggle with into unix permissions misconfiguration issues. WeeWX needs to be able to write to the web server's HTML document tree.  Unfortunately there are too many web server variants to provide a universal howto here. Typically, permission issues are straightforward to spot in both WeeWX and web server logs.
 
 > [!TIP]
 >Initially it is helpful to set debug=1 in `weewx.conf` to make the WeeWX logging more verbose.
+>
 >Check your system logs and web server error log for any issues you might see initially.
->Typically, permission issues are straightforward to spot in both WeeWX and web server logs..
 
 WeeWX does not require any particular web server package.
 
