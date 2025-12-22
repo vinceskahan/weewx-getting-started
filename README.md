@@ -93,7 +93,7 @@ In short:
 * which needs to be able to write to a directory owned by the web server process
 * which in turn runs as a 'different' unix user
 
-This last item frequently causes new users to struggle with into unix permissions misconfiguration issues. WeeWX needs to be able to write to the web server's HTML document tree.  Unfortunately there are too many web server variants to provide a universal howto here. Typically, permission issues are straightforward to spot in both WeeWX and web server logs.
+This last item frequently causes new users to struggle with unix permissions misconfiguration issues. WeeWX needs to be able to write to the web server's HTML document tree.  Unfortunately there are too many web server variants to provide a universal howto here. Typically, permission issues are straightforward to spot in both WeeWX and web server logs.
 
 > [!TIP]
 >Initially it is helpful to set debug=1 in `weewx.conf` to make the WeeWX logging more verbose.
@@ -116,13 +116,13 @@ By default WeeWX logs via your operating system's default logging mechanism, whi
 Systemd can be complicated for many users and its interface can be painful.  For details on how to use systemd's 'systemctl' command, consult your operating system's manual pages, do a Google search, or see the WeeWX documentation [HERE](https://www.weewx.com/docs/5.2/usersguide/monitoring/).
 
 > [!TIP]
-> Alternately, many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files, which requires also installing and configuring the legacy 'logrotate' tool to periodically rotate the logs.
+> Alternately, many users choose to customize their operating system to add the legacy 'rsyslogd' type of logging which writes simple flat files. This also requires installing and configuring the legacy 'logrotate' tool to periodically rotate the logs.
 >
 > Template files for both rsyslogd and logrotate are provided with WeeWX and it's only a few one-time steps to configure logging to work in a legacy rsyslogd type of mode.  For details - see [HERE](logging-with-rsyslogd.md).
 
 ### How To Change Your Initial Settings
 
-WeeWX provides the `weectl` utility for configuring much of the system settings, as well as other operations.  For details see the documentation [HERE](https://www.weewx.com/docs/5.2/utilities/weectl-about/).
+WeeWX provides the `weectl` utility for configuring much of the system settings, as well as other operations.  For details - see the documentation [HERE](https://www.weewx.com/docs/5.2/utilities/weectl-about/).
 
 In other cases, you might need to manually edit weewx.conf or a skin.conf file, or even a html .tmpl template file within a skin.  If you edit weewx.conf, you will need to restart weewx to make the changes take effect.  Changes to skin.conf or a skin's .tmpl HTML templates take effect when weewx runs its periodic reports when the next archive_interval rolls around.
 
@@ -136,7 +136,7 @@ You can also create your own custom skin from scratch, which is a much more adva
 
 ### Uploading Your Data To Internet Sites
 
-Many users choose to upload their data periodically to commonly used Internet sites such as Weather Underground.  This is enabled by hand-editing weewx.conf and setting the required parameters in that site's section therein, setting enable=true, and restarting weewx.
+Many users choose to upload their data periodically to commonly used Internet sites such as Weather Underground.  This is enabled by hand-editing weewx.conf and setting the required parameters in that site's section therein, setting 'enable=true', and restarting weewx.
 
 Uploaders for a half-dozen well-known sites are included in WeeWX core, with several dozen more that can be added. See the Wiki for many user-provided uploaders and links to each item's installation and configuration steps.
 
