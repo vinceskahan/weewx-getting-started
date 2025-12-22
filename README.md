@@ -21,6 +21,8 @@ WeeWX is extremely extensible, with many dozens of user-developed additions and 
 
 User support is done via the weewx-user [Google Group](https://groups.google.com/g/weewx-user) you may choose the subscribe to.  A Google account login is required for posting.
 
+You may choose to register your station to make it findable on the [WeeWX Station Map](https://weewx.com/stations.html) of registered stations.   At this writing almost 2,000 stations have chosen to register themselves.  This is completely 'optional'.
+
 ## A Typical System
 
 A typical WeeWX system consists of two parts, WeeWX itself and a web server.
@@ -37,7 +39,7 @@ WeeWX has some terminology you need to be aware of:
 * an 'extension' packages customizations for easy installation
 * an 'uploader' sends data to an external site or service
 
-There are literally dozens of each available to optionally add to your WeeWX system.  Consult the [Wiki](https://github.com/weewx/weewx/wiki) for a list.
+There are literally dozens of each item available to optionally add to your WeeWX system.  Consult the [Wiki](https://github.com/weewx/weewx/wiki) for a list.
 
 You might see a few additional terms in the documentation and support forums:
 
@@ -48,7 +50,7 @@ Archive data is what WeeWX periodically actually saves to its database, generall
 
 ## WeeWX In A Nutshell
 
-For a working WeeWX system you need to learn how do the following:
+For a typical WeeWX system you need to learn how do the following:
 
 * install and configure WeeWX itself
 * install and configure a web server to match
@@ -60,7 +62,7 @@ For a working WeeWX system you need to learn how do the following:
 
 WeeWX can be installed in a variety of ways. New users typically use their operating system's native packaging mechanism (apt, yum, rpm, zipper). Other more advanced installation mechanisms (pip, git) are available as well.
 
-For details and procedures - start with the [WeeWX Quick start](https://www.weewx.com/docs/5.2/#installation)
+For details and procedures - start with the [WeeWX Quick start](https://www.weewx.com/docs/5.2/#installation).
 
 ### Configuration
 
@@ -69,7 +71,7 @@ WeeWX is set up via two main configuration files:
 * `weewx.conf` configures WeeWX itself
 * `skin.conf` configures each particular skin specifically 
 
-For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weewx.conf to match. The provided `weectl` utility is used to add to, delete from, or tune your system, although some hand-editing of weewx.conf might be needed as well..
+For an initial installation from a pre-built package, the installation will prompt you with a few top-level questions needed to define your system.  For other installation mechanisms you will have to hand-edit weewx.conf to match. The provided `weectl` utility is used to add to, delete from, or tune your system, although some hand-editing of weewx.conf might be needed occasionally.
 
 Initially simply running the defaults is recommended.
 
@@ -84,13 +86,19 @@ This does not happen in realtime, it happens only periodically based on how you 
 
 ### Integrating WeeWX With Your Web Server
 
-Integrating WeeWX with a web server can be very frustrating for new users, who frequently run into unix permissions misconfiguration issues.
+Integrating WeeWX with a web server can be very frustrating for new users.
 
 In short:
 * WeeWX runs as an unprivileged user ('weewx' for a packaged installation)
 * which needs to be able to write to a directory owned by the web server process
 * which in turn runs as a 'different' unix user
-* lastly, WeeWX needs to be able to write to the web server's HTML document tree
+
+This last item frequently causes new users to struggle with into unix permissions misconfiguration issues. WeeWX needs to be able to write to the web server's HTML document tree.  Unfortunately there are too many web server variants to provide a universal howto here.
+
+> [!TIP]
+>Initially it is helpful to set debug=1 in `weewx.conf` to make the WeeWX logging more verbose.
+>Check your system logs and web server error log for any issues you might see initially.
+>Typically, permission issues are straightforward to spot in both WeeWX and web server logs..
 
 WeeWX does not require any particular web server package.
 
@@ -98,9 +106,6 @@ Users typically install 'nginx' or 'apache' although any web server package will
 
 * For nginx on a debian(ish) system, one method to configure nginx is [HERE](integrate-weewx-with-nginx.md)
 * Alternate configurations are discussed in detail in the [WeeWX User's Guide](https://www.weewx.com/docs/5.2/usersguide/webserver/).
-
-> [!TIP]
->Initially it is helpful to set debug=1 in `weewx.conf` to make the debugging information more verbose to help you get things integrated successfully.
 
 ### Viewing Log Files
 
