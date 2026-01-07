@@ -12,6 +12,7 @@ When posting to weewx-user with a problem report, please try to provide enough i
 * what is a brief description of your station model ?
 * your host(s) platform and os ?
 * your network configuration ?
+* how did you install weewx (pip/packaged/git/other) ?
 
 ### Provide diagnostic information
 * what do your logs show after setting debug=1 from weewx startup through two archive periods
